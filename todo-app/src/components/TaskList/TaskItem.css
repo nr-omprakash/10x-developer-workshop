@@ -1,0 +1,177 @@
+.task-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  border-color: #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+  opacity: 0.7;
+}
+
+.task-item.archived {
+  opacity: 0.5;
+  background-color: #f9f9f9;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.status-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.status-btn:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.status-btn:disabled {
+  cursor: not-allowed;
+}
+
+.status-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.status-icon.todo.personal {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-icon.todo.business {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.status-icon.completed {
+  background-color: #e8f5e8;
+  color: #4caf50;
+}
+
+.status-icon.archived {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+.category-initial {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-transform: capitalize;
+}
+
+.category-badge.personal {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.category-badge.business {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.completion-date {
+  font-size: 12px;
+  color: #666;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  color: #666;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.menu-btn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .task-item {
+    padding: 12px;
+  }
+  
+  .task-content {
+    gap: 10px;
+  }
+  
+  .status-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .task-title {
+    font-size: 15px;
+  }
+  
+  .category-badge {
+    font-size: 11px;
+    padding: 1px 6px;
+  }
+  
+  .completion-date {
+    font-size: 11px;
+  }
+}
